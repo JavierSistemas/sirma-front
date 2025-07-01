@@ -1,0 +1,27 @@
+<p>consulta works!</p>
+<section class="consulta">
+  <h1>Mis Solicitudes</h1>
+  <table class="tabla-solicitudes">
+    <thead>
+      <tr>
+        <th>N° Solicitud</th>
+        <th>Fecha</th>
+        <th>Tipo</th>
+        <th>Estado</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let s of solicitudes">
+        <td>{{ s.numero }}</td>
+        <td>{{ s.fecha }}</td>
+        <td>{{ s.tipo }}</td>
+        <td>{{ s.estado | estado }}</td>
+        <td>
+          <button>Ver detalle</button>
+          <button>Descargar</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</section>

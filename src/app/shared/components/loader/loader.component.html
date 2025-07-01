@@ -1,0 +1,30 @@
+<div 
+  class="loader-backdrop"
+  *ngIf="visible"
+  role="status"
+  aria-live="polite"
+>
+  <div class="loader" aria-label="Cargando">
+    <svg class="loader__progress" width="60" height="60">
+      <circle
+        class="loader__bg"
+        cx="30" cy="30" r="25"
+        stroke="#3b4252"
+        stroke-width="6"
+        fill="none"
+      />
+      <circle
+        class="loader__fg"
+        cx="30" cy="30" r="25"
+        stroke="#60a5fa"
+        stroke-width="6"
+        fill="none"
+        [attr.stroke-dasharray]="circumference"
+        [attr.stroke-dashoffset]="progressStroke"
+        style="transition: stroke-dashoffset 0.05s linear;"
+      />
+    </svg>
+    <span class="loader__text">{{ mensaje || 'Cargando...' }}</span>
+    <span class="sr-only">Cargando</span>
+  </div>
+</div>
