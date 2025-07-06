@@ -1,0 +1,21 @@
+<nav class="navbar">
+  <div class="navbar__start">
+    <div class="navbar__logo">
+      <img src="assets/img/logo.png" alt="Logo SIRMA" />
+    </div>
+  </div>
+
+  <div class="navbar__center">
+    <ul class="navbar__links">
+      <li><a routerLink="/inicio" routerLinkActive="active">Inicio</a></li>
+      <li><a routerLink="/registro" routerLinkActive="active">Nueva Solicitud</a></li>
+      <li><a routerLink="/consultar" routerLinkActive="active">Consultar</a></li>
+      <li><a routerLink="/perfil" routerLinkActive="active">Perfil</a></li>
+      <li><a routerLink="/ayuda" routerLinkActive="active">Ayuda</a></li>
+    </ul>
+  </div>
+
+  <div class="navbar__end">
+    <button class="navbar__logout" (click)="logout()">Cerrar sesión</button>
+  </div>
+</nav>
